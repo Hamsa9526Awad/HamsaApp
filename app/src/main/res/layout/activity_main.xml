@@ -2,25 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/button"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#00BCD4"
-    tools:context=".MainActivity">
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="223dp"
-        android:layout_height="149dp"
-        android:background="#D1BF23"
-        android:backgroundTint="#27BFAD"
-        android:drawableTint="#00BCD4"
-        android:text="hamsa"
-        android:textColor="#EA2929"
-        android:textColorHighlight="#34BCCF"
-        android:textColorLink="#D8AFAF"
-        app:rippleColor="#8DE118"
-        app:strokeColor="#B41CCF"
-        tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="16dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    tools:context=".MainActivity" />
