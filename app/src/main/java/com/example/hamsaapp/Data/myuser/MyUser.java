@@ -5,6 +5,10 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 @Entity//Entity==Table==جدول
 // عندما نريد أن نتعامل مع هذه الفئة كجدول معطيات نضع Entity
+
+/**
+ * فئة تمثل مهمة
+ */
 public class MyUser
 {
     @PrimaryKey(autoGenerate = true)// تجديد الصفة كمفتاح رئيسي والذي ينتج بشكل تلقائي
@@ -55,4 +59,5 @@ public class MyUser
     public void setPassw(String passw) {
         this.passw = passw;
     }
+
 }
