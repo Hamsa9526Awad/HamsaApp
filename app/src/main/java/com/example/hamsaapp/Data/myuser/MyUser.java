@@ -38,9 +38,7 @@ public class MyUser
         return phone;
     }
 
-    public String getPassw() {
-        return passw;
-    }
+    public String getPassw() {return passw;}
 
     public void setFullName(String fullName) {
         this.fullName = fullName;
