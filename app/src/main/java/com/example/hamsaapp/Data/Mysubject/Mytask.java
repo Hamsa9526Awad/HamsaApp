@@ -1,4 +1,4 @@
-package com.example.hamsaapp.Data.mytask;
+package com.example.hamsaapp.Data.Mysubject;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey;
 /**
  * فئة تمثل مهمة
  */
-public class mysubject
+public class Mytask
 {
     @PrimaryKey(autoGenerate = true)// تجديد الصفة كمفتاح رئيسي والذي ينتج بشكل تلقائي
     /*** رقم المهمة*/
@@ -27,6 +27,8 @@ public class mysubject
 
     /*** زمن بناء المهمة*/
     public long time;
+    /** هل تمت المهمة  */
+    public boolean isCompleted;
 
 
     @Override
@@ -37,6 +39,8 @@ public class mysubject
                 ", text='" + text + '\'' +
                 ", subid=" + subid +
                 ", userid=" + userid +
+                ", time=" + time +
+                ", isCompleted=" + isCompleted +
                 '}';
     }
 
@@ -58,6 +62,10 @@ public class mysubject
 
     public long getUserid() {
         return userid;
+    }
+
+    public boolean isCompleted() {
+        return isCompleted;
     }
 
     public void setKeyid(long keyid) {
@@ -82,5 +90,9 @@ public class mysubject
 
     public void setTime(long time) {
         this.time = time;
+    }
+
+    public void setCompleted(boolean completed) {
+        isCompleted = completed;
     }
 }
