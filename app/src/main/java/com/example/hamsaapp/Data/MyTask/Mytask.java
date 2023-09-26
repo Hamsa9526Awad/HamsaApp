@@ -1,4 +1,4 @@
-package com.example.hamsaapp.Data.Mysubject;
+package com.example.hamsaapp.Data.MyTask;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;

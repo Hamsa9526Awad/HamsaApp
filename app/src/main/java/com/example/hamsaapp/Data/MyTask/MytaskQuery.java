@@ -1,4 +1,4 @@
-package com.example.hamsaapp.Data.Mysubject;
+package com.example.hamsaapp.Data.MyTask;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
