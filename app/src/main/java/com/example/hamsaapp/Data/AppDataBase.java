@@ -1,4 +1,4 @@
-package com.example.hamsaapp.Data.myuser;
+package com.example.hamsaapp.Data;
 
 import android.content.Context;
 
@@ -6,10 +6,12 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-import com.example.hamsaapp.Data.MyTask.Mytask;
-import com.example.hamsaapp.Data.MyTask.MytaskQuery;
-import com.example.hamsaapp.Data.mySubject.Mysubject;
-import com.example.hamsaapp.Data.mySubject.MysubjectQuery;
+import com.example.hamsaapp.Data.mytasktable.Mytask;
+import com.example.hamsaapp.Data.mytasktable.MytaskQuery;
+import com.example.hamsaapp.Data.mySubjectsTable.Mysubject;
+import com.example.hamsaapp.Data.mySubjectsTable.MysubjectQuery;
+import com.example.hamsaapp.Data.myuser.MyUser;
+import com.example.hamsaapp.Data.myuser.Myuserquery;
 
 @Database(entities = {MyUser.class, Mysubject.class, Mytask.class},version = 5)
 
@@ -34,5 +36,7 @@ public abstract class AppDataBase extends RoomDatabase {
 
 
         }
+        return db;
     }
 }
+

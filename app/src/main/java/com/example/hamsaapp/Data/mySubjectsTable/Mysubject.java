@@ -1,4 +1,4 @@
-package com.example.hamsaapp.Data.mySubject;
+package com.example.hamsaapp.Data.mySubjectsTable;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -8,20 +8,20 @@ public class Mysubject {
 
     @PrimaryKey(autoGenerate = true)// تجديد الصفة كمفتاح رئيسي والذي ينتج بشكل تلقائي
     /*** رقم المهمة*/
-    public long keyid;//رقم المهمة
+    public long key_id;//رقم المهمة
 
     public String title;
 
     @Override
     public String toString() {
         return "Mysubject{" +
-                "keyid=" + keyid +
+                "key_id=" + key_id +
                 ", title='" + title + '\'' +
                 '}';
     }
 
     public long getKeyid() {
-        return keyid;
+        return key_id;
     }
 
     public String getTitle() {
@@ -29,7 +29,7 @@ public class Mysubject {
     }
 
     public void setKeyid(long keyid) {
-        this.keyid = keyid;
+        this.key_id = key_id;
     }
 
     public void setTitle(String title) {
