@@ -16,19 +16,23 @@ import com.example.hamsaapp.Data.mySubject.MysubjectQuery;
 public abstract class AppDataBase extends RoomDatabase {
 
 
-        private static AppDataBase db;
-        public abstract Myuserquery.MyUserQuery getMyUserQuery();
-        public abstract MysubjectQuery getMySubjectQuery();
-        public abstract MytaskQuery getMyTaskQuery();
+    private static AppDataBase db;
 
-        public static AppDataBase getDB(Context context) {
-            if (db == null) {
-                db = Room.databaseBuilder(context,
-                                AppDataBase.class, "database-name")
-                        .fallbackToDestructiveMigration()
-                        .allowMainThreadQueries()
-                        .build();
+    public abstract Myuserquery.MyUserQuery getMyUserQuery();
+
+    public abstract MysubjectQuery getMySubjectQuery();
+
+    public abstract MytaskQuery getMyTaskQuery();
+
+    public static AppDataBase getDB(Context context) {
+        if (db == null) {
+            db = Room.databaseBuilder(context,
+                            AppDataBase.class, "database-name")
+                    .fallbackToDestructiveMigration()
+                    .allowMainThreadQueries()
+                    .build();
 
 
-            }
         }
+    }
+}
