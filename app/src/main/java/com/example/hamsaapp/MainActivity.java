@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.example.hamsaapp.Data.AppDataBase;
+import com.example.hamsaapp.Data.mySubjectsTable.Mysubject;
+import com.example.hamsaapp.Data.mySubjectsTable.MysubjectQuery;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -15,6 +19,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.d("hamsa","onCreate");
         Toast.makeText(this, "onCreate", Toast.LENGTH_SHORT).show();
+
+        // بناء قاعدة بيانات وارجاع مؤشر عليها
+        AppDataBase db= AppDataBase.getDB(getApplicationContext());
+        // مؤشر لجدول
+        MysubjectQuery subjectQuery = db.getMySubjectQuery();
+
+        // بناء كائن من نوع الجدول وتحديد قيم الصفات
+        Mysubject s1=new Mysubject();
+        s1.setTitle("Math");
+        Mysubject s2=new Mysubject();
+        s2.title="Computers";
+
+        //اضافة كائن للجدول
+        subjectQuery.insertsubject(s1);
+        subjectQuery.insertsubject(s2);
+
     }
   
     @Override

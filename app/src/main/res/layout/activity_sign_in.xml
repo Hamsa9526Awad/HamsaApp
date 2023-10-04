@@ -16,6 +16,7 @@
             android:layout_height="76dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/atE-mail"
                 android:layout_width="match_parent"
                 android:layout_height="71dp"
                 android:layout_margin="8dp"
@@ -26,10 +27,11 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="277dp"
+            android:layout_height="179dp"
             android:layout_margin="8dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
                 android:layout_width="410dp"
                 android:layout_height="wrap_content"
                 android:hint="password" />
@@ -37,7 +39,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btnsignup"
             android:layout_width="match_parent"
             android:layout_height="76dp"
             android:layout_margin="8dp"
@@ -45,7 +47,7 @@
             android:text="sign-up" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btnsignin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="sign-in" />
