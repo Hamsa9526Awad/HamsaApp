@@ -10,6 +10,8 @@ import com.example.hamsaapp.Data.AppDataBase;
 import com.example.hamsaapp.Data.mySubjectsTable.Mysubject;
 import com.example.hamsaapp.Data.mySubjectsTable.MysubjectQuery;
 
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -20,20 +22,31 @@ public class MainActivity extends AppCompatActivity {
         Log.d("hamsa","onCreate");
         Toast.makeText(this, "onCreate", Toast.LENGTH_SHORT).show();
 
-        // بناء قاعدة بيانات وارجاع مؤشر عليها
+        // بناء قاعدة بيانات وارجاع مؤشر عليها1
         AppDataBase db= AppDataBase.getDB(getApplicationContext());
-        // مؤشر لجدول
+        // مؤشر لجدول2
         MysubjectQuery subjectQuery = db.getMySubjectQuery();
-
-        // بناء كائن من نوع الجدول وتحديد قيم الصفات
+        // مثال لاستعمال جدول البيانات
+        // بناء كائن من نوع الجدول وتحديد قيم الصفات3
         Mysubject s1=new Mysubject();
         s1.setTitle("Math");
         Mysubject s2=new Mysubject();
-        s2.title="Computers";
+        s2.title="Computers"; // set ولكن بطريقة أخرى لأنها public
 
-        //اضافة كائن للجدول
+        //اضافة كائن للجدول4
         subjectQuery.insertsubject(s1);
         subjectQuery.insertsubject(s2);
+
+        //5فحص هل تم حفظ ما سبق
+        // استخراج وطباعة جميع معطيات الجدول المواضيع
+
+        List<Mysubject> allsubjects = subjectQuery.getAllsubjects();
+        for (Mysubject s: allsubjects) {
+            Log.d("Hamsa",s.title);
+            Toast.makeText(this, s.title, Toast.LENGTH_SHORT).show();
+
+        }
+
 
     }
   
