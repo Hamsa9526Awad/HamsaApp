@@ -6,10 +6,12 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.android.material.textfield.TextInputEditText;
+
 public class SignIn extends AppCompatActivity {
 
-    private EditText etEmail;
-    private EditText etPassword;
+    private TextInputEditText etEmail;
+    private TextInputEditText etPassword;
     private Button btnsignup;
     private Button btnsignin;
 
@@ -17,7 +19,9 @@ public class SignIn extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_in);
+        setContentView(R.layout.activity_sign_in); // بناء واجهة المستعمل- كل الكائنات الموجودة على الواجهة
+
+        
 
     }
 

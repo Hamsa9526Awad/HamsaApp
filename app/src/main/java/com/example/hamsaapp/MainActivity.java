@@ -28,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
         // وضع مؤشر الصفة على الكائن المرئي الموجود بواجهة المستعمل spnr2
         spnrsubject = findViewById(R.id.spnrsubject);
         //بناء الوسيط وتحديد واجهة تنسيق لمعطى واحد spnr3
-        ArrayAdapter<String> adapter =new ArrayAdapter<>(getApplicationContext());
-    android.R.layout.simple_spinner_item),
+        ArrayAdapter<String> adapter =new ArrayAdapter<>(getApplicationContext(),android.R.layout.simple_spinner_item);
+
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         //مصدر معطيات (ممكن أن يكون قائمة من قاعدة بيانات مثلا) data source
         String[] ar={"Math","CS","Phs","Arb","Eng"};
