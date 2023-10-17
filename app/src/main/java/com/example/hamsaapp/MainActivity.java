@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.hamsaapp.Data.AppDataBase;
@@ -13,6 +14,8 @@ import com.example.hamsaapp.Data.mySubjectsTable.MysubjectQuery;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+
+    private Spinner spnr
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

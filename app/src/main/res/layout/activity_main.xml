@@ -7,6 +7,13 @@
     android:background="@drawable/task"
     tools:context=".MainActivity">
 
+    <Spinner
+        android:id="@+id/spnrSubject"
+        android:layout_width="24dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="179dp"
+        tools:layout_editor_absoluteY="28dp" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
