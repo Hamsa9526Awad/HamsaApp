@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -14,14 +15,29 @@ import com.example.hamsaapp.Data.mySubjectsTable.MysubjectQuery;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+    //spnr1 تعريف صفة للكائن المرئي
+    private Spinner spnrsubject;
 
-    private Spinner spnr
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //iuiyu8i7uii
         setContentView(R.layout.activity_main);
+        // وضع مؤشر الصفة على الكائن المرئي الموجود بواجهة المستعمل spnr2
+        spnrsubject = findViewById(R.id.spnrsubject);
+        //بناء الوسيط وتحديد واجهة تنسيق لمعطى واحد spnr3
+        ArrayAdapter<String> adapter =new ArrayAdapter<>(getApplicationContext());
+    android.R.layout.simple_spinner_item),
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //مصدر معطيات (ممكن أن يكون قائمة من قاعدة بيانات مثلا) data source
+        String[] ar={"Math","CS","Phs","Arb","Eng"};
+        //تحديد المعطيات الوسيط spnr5
+        adapter.addAll(ar);
+        //ربط الكائن المرئي بالوسيط spnr6
+        spnrsubject.setAdapter(adapter);
+
         Log.d("hamsa","onCreate");
         Toast.makeText(this, "onCreate", Toast.LENGTH_SHORT).show();
 

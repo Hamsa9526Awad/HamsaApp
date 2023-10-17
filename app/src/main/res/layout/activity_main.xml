@@ -8,10 +8,11 @@
     tools:context=".MainActivity">
 
     <Spinner
-        android:id="@+id/spnrSubject"
+        android:id="@+id/spnrsubject"
         android:layout_width="24dp"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="179dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="28dp" />
 
     <TextView
